@@ -1,1 +1,1 @@
-document.write('2017年11月');
+document.write('2018年1月');
