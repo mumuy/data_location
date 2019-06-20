@@ -1,9 +1,9 @@
 # 中国行政区划信息
 
-数据演示(DEMO)地址：http://jquerywidget.com/jquery-citys/
+数据演示(DEMO)地址：https://jquerywidget.com/jquery-citys/
 
 ### 版权
-数据库由 [passer-by.com](http://passer-by.com/) 整理,获取最新最全的数据还请关注此项目。
+数据库由 [passer-by.com](https://passer-by.com/) 整理,获取最新最全的数据还请关注此项目。
 
 ### 数据说明
 - 省、市、区数据来自于民政局、国务院公告、国家统计局，确保及时更新和权威；
