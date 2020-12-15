@@ -1,1 +1,1 @@
-document.write('2020年04月');
+document.write('2020年12月');
