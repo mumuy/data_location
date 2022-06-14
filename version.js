@@ -1,1 +1,1 @@
-document.write('2021年8月');
+document.write('2022年6月');
