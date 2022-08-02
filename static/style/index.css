@@ -455,85 +455,16 @@ a:hover{
         padding-top: 0;
         width: auto;
         margin-bottom: 15px;
-        text-align: center;
     }
     .mod-panel .hd h1{
         margin-bottom: 5px;
         line-height: 26px;
         font-size: 20px;
     }
-    .mod-panel .hd h1 span.name{
-        display: inline;
-    }
     .mod-panel .hd p{
         line-height: 22px;
         font-size: 13px;
         overflow: hidden;
-    }
-    .mod-panel .hd .picture{
-        width: auto;
-        padding-top: 0;
-    }
-    .mod-panel .hd .picture img{
-        width: 256px;
-        height: 160px;
-        margin-left: 0;
-    }
-    .mod-panel .hd .picture .btn{
-        display: block;
-        margin: 0 auto;
-    }
-    .mod-panel .bd{
-        margin-left: 0;
-    }
-    .mod-panel .bd .c-hd{
-        text-align: center;
-    }
-	.mod-panel .bd .c-hd ul{
-		overflow-x: auto;
-		white-space: nowrap;
-	}
-	.mod-panel .bd .c-hd li{
-		float: none;
-		display: inline-block;
-		width: auto;
-        min-width: 30%
-	}
-	.mod-panel .bd .c-hd li a{
-		padding: 0 4px;
-	}
-    .mod-panel .bd .c-bd{
-        height: auto;
-    }
-    .mod-panel textarea{
-        width: 100%;
-        height: 80px;
-        box-sizing: border-box;
-    }
-    .mod-panel .bd p span{
-        float: left;
-        width: 50%;
-        text-align: center;
-        margin-right: 0;
-    }
-    .mod-panel .btn{
-        width: 48%;
-        margin-bottom: 5px;
-        line-height: 24px;
-    }
-    .mod-panel .btn-3{
-        width: 32%;
-    }
-
-    .mod-intro{
-        margin-bottom: 25px;
-    }
-    .mod-intro .bd li{
-        float: none;
-        width: auto;
-    }
-    .mod-intro .bd .item{
-        margin: 0 5px 5px;
     }
 
     .mod-article{
@@ -554,17 +485,6 @@ a:hover{
         font-size: 14px;
     }
 
-    .mod-app{
-        margin-bottom: 25px;
-    }
-    .mod-app .bd ul{
-        padding: 10px 0;
-    }
-    .mod-app .bd li{
-        display: inline-block;
-        width: 48%;
-    }
-
     .mod-copy{
         padding: 15px 0 25px;
         margin-bottom: 25px;
@@ -577,16 +497,15 @@ a:hover{
 
 @media screen and (max-width: 640px) {
     .mod-panel .inner{
-        padding: 10px 0;
+        padding: 10px;
     }
     .mod-panel .bd .c-bd{
         padding: 15px 10px;
     }
-
-    .mod-intro .hd{
-        margin: 0 0 5px;
+    .mod-panel .bd input[type="text"]{
+        width: 200px;
     }
-    .mod-intro .bd .item{
-        margin: 0 0 5px;
+    .mod-panel .bd .btn{
+        min-width: 64px;
     }
 }
