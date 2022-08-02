@@ -1,6 +1,8 @@
 # 中国行政区划信息
 
-数据演示(DEMO)地址：https://jquerywidget.com/jquery-citys/
+数据演示地址：[https://passer-by.com/data_location/](https://passer-by.com/data_location/)
+
+三级联动插件：[https://jquerywidget.com/jquery-citys/](https://jquerywidget.com/jquery-citys/)
 
 ### 版权
 数据库由 [passer-by.com](https://passer-by.com/) 整理,获取最新最全的数据还请关注此项目。
