@@ -149,7 +149,7 @@
 					listMap = map;
 					var count1 = 0,count2 = 0,count3 = 0,count4 = 0;
 					for(var code in listMap){
-						if(code.match(/00$/)){
+						if(code.match(/00$/)&&code<'710000'){
 							if(listMap[code].match(/市$/)){
 								count1++;
 							}else if(listMap[code].match(/地区$/)){
