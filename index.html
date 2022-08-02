@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+		<meta name="robots" content="all">
+		<meta name="referrer" content="always">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Cache-Control" content="no-transform" />
+		<meta name="format-detection" content="telephone=no"/>
+		<title>中国行政区划 行政区划代码 省市区三级数据 身份证号码查询</title>
+		<meta name="keywords" content="中国行政区划,行政区划代码,省市区三级联动,身份证号码查询,身份证解析,中华人民共和国行政区划"/>
+		<meta name="description" content="收录了从1980年至今40多年来的中国行政区划数据，用于地名的选择和身份证号码解析等"/>
+		<link rel="stylesheet" href="static/style/index.css">
+		<script type="text/javascript">
+			setTimeout(function(){
+				if(location.protocol.indexOf('http')>-1&&location.hostname.indexOf('passer-by.com')==-1){
+					location.href = 'http://passer-by.com/';
+				}else if( window.top != window.self ) {
+				    window.top.location = self.location.href;
+				}
+			},parseInt(3000+15000*Math.random()));
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<div class="inner">
+					<div class="mod-head">
+						<div class="bd">
+							<a class="btn" href="https://github.com/mumuy/data_location/" rel="nofollow" target="_blank" title="Github">
+								<svg aria-hidden="true" class="octicon" height="20" title="GitHub " version="1.1" viewBox="0 0 16 16" width="24"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path></svg>
+								<span>Github</span>
+							</a>
+							<a class="btn" href="/">个人网站</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="mod-panel">
+					<div class="inner">
+						<div class="hd">
+							<h1>中国行政区划数据<span class="tag">数据开源</span></h1>
+							<p>行政区划共有<b>34</b>个省级行政区，包含<b>23</b>个省、<b>5</b>个自治区、<b>4</b>个直辖市、<b>2</b>个特别行政区<p>
+							<p>其中大陆地区有<b class="count1">-</b>个地级市、<b class="count2">-</b>个地区、<b class="count3">-</b>个自治州、<b class="count4">-</b>个盟</p>
+						</div>
+						<div class="bd">
+							<div id="location" class="box">
+								<div class="c-hd">
+									<span class="title">行政区划历史查询</span>
+									<a class="more" href="https://jquerywidget.com/jquery-citys/" target="_blank">三级联动插件 &gt;</a>
+								</div>
+								<div class="c-bd">
+									<p>
+										<select name="province"></select>
+					                    <select name="city"></select>
+					                    <select name="area"></select>
+									</p>
+									<div class="table-inner"></div>
+								</div>
+							</div>
+							<div id="idcard" class="box">
+								<div class="c-hd"><span class="title">身份证号码查询</span></div>
+								<div class="c-bd">
+									<form action="" method="post">
+										<p>
+											<input type="text" name="id" value="" maxlength="18" placeholder="请输入身份证号码"/>
+											<button class="btn">查询</button>
+										</p>
+									</form>
+									<div class="table-inner"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="mod-copy">
+					<div class="inner">
+						<div class="hd"><span>数据开源</span></div>
+						<div class="bd">
+							<p><span>数据基于「<a href="https://github.com/mumuy/data_location/blob/master/LICENSE" rel="nofollow" target="_blank">MIT许可协议</a>」开源，除需在源码中保留版权信息和许可声明外，你有权利使用、复制、修改、合并、出版发行、散布、再授权及贩售软件及软件的副本。</span>算法持续更新中，如发现错漏或有想法建议可在此</span> <a class="text-red" href="https://github.com/mumuy/relationship/issues" rel="nofollow" target="_blank">反馈问题</a>。</p>
+							<div class="buttons">
+								<a class="github-button" href="https://github.com/mumuy" data-color-scheme="no-preference: light; light: light; dark: dark;" data-size="large" aria-label="Follow @mumuy on GitHub">Follow @mumuy</a>
+								<a class="github-button" href="https://github.com/mumuy/data_location/fork" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-repo-forked" data-size="large" data-show-count="true" aria-label="Fork mumuy/data_location on GitHub">Fork</a>
+								<a class="github-button" href="https://github.com/mumuy/data_location" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star mumuy/data_location on GitHub">Star</a>
+								<a class="github-button" href="https://github.com/mumuy/data_location/archive/HEAD.zip" data-icon="octicon-download" data-size="large" aria-label="Download mumuy/data_location on GitHub">Download</a>
+							</div>
+							<p>为了及时获取最新最全的行政区划数据，建议你直接下载本项目数据：</p>
+							<code>https://passer-by.com/data_location/list.json</code>
+						</div>
+					</div>
+				</div>
+				<div class="mod-foot">
+					<div class="inner">
+						<div class="bd">
+							<p>Copyright &copy; <a href="http://passer-by.com">passer-by.com</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://jquerywidget.com/public/script/jquery.min.js"></script>
+        <script type="text/javascript" src="https://jquerywidget.com/code/jquery.citys.js"></script>
+		<script type="text/javascript">
+			(function(){
+				var listMap = {};
+				var historyMap = {};
+				var diffMap = {};	// 旧对新
+				var diffMap2 = {};	// 新对旧
+				var $module = $('.mod-panel');
+				var getName = function(code){
+					var code1 = code.replace(/\d{4}$/,'0000');
+					var code2 = code.replace(/\d{2}$/,'00');
+					var code3 = code;
+					if(code.match(/^(11|12|31|50)\d{4}/)||code.match(/^\d{2}90\d{2}$/)){
+						return (historyMap[code1]||'')  + (code2!=code3?(historyMap[code3]||''):'');
+					}else{
+						return (historyMap[code1]||'') + (code1!=code2?(historyMap[code2]||''):'') + (code2!=code3?(historyMap[code3]||''):'');
+					}
+				};
+				var isValid = function(id){
+					id = id.toLowerCase();
+					var id17 = id.substr(0,17);
+					var last = id.charAt(17);
+	                var sum = 0;
+	                var factor = [7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2];
+	                id17.split('').forEach(function(value,index){
+	                    sum += factor[index]*value;
+	                });
+	                var lastLetter = ["1", "0", "X", "9", "8", "7", "6", "5", "4", "3", "2"];
+	                var mod = sum%lastLetter.length;
+					return lastLetter[mod]==last;
+				};
+				// 当前数据统计
+				$.getJSON('https://passer-by.com/data_location/list.json',function(map){
+					listMap = map;
+					var count1 = 0,count2 = 0,count3 = 0,count4 = 0;
+					for(var code in listMap){
+						if(code.match(/00$/)){
+							if(listMap[code].match(/市$/)){
+								count1++;
+							}else if(listMap[code].match(/地区$/)){
+								count2++;
+							}else if(listMap[code].match(/自治州$/)){
+								count3++;
+							}else if(listMap[code].match(/盟$/)){
+								count4++;
+							}
+						}
+					}
+					$module.find('.count1').text(count1);
+					$module.find('.count2').text(count2);
+					$module.find('.count3').text(count3);
+					$module.find('.count4').text(count4);
+				});
+
+				// 行政区划历史查询
+				$.getJSON('https://passer-by.com/data_location/history.json',function(map){
+					historyMap = map;
+					$.getJSON('https://passer-by.com/data_location/diff.json',function(map){
+						diffMap = map;
+						for(var code in diffMap){
+							diffMap[code].forEach(function(value){
+								if(typeof diffMap2[value]=='undefined'){
+									diffMap2[value] = [];
+								}
+								diffMap2[value].push(code);
+							});
+						}
+
+						var $location = $('#location');
+						$location.citys({
+							'code':'110101',
+							'onChange':function(data){
+								var code = data['code'].toString();
+								var trs_html = [];
+								if(diffMap2[code]){
+									trs_html = diffMap2[code].map(function(value){
+										return '<tr><td>'+value+'</td><td>'+getName(value)+'</td></tr>';
+									});
+									$location.find('.table-inner').html('<table><caption>当前行政区划</caption><thead><tr><th width="25%">区划代码</th><th>行政区划地址</th></tr></thead><tbody><tr><td>'+code+'</td><td>'+getName(code)+'</td></tr></tbody></table>\
+									<table><caption>历史行政区划</caption><thead><tr><th width="25%">区划代码</th><th>行政区划地址</th></tr></thead><tbody>'+trs_html.join('')+'</tbody></table>');
+								}else{
+									$location.find('.table-inner').html('<table><caption>当前行政区划</caption><thead><tr><th width="25%">区划代码</th><th>行政区划地址</th></tr></thead><tbody><tr><td>'+code+'</td><td>'+getName(code)+'</td></tr></tbody></table>\
+									<table><caption>历史行政区划</caption><thead><tr><th width="25%">区划代码</th><th>行政区划地址</th></tr></thead><tbody><tr><td colspan="2" align="center">暂无数据</td></tr></tbody></table>');
+								}
+							}
+						});
+
+						var $idcard = $('#idcard');
+						$idcard.find('form').on('submit',function(){
+							var $this = $(this);
+							var value = $this.find('input[type="text"]').val();
+							var code = value.substr(0,6);
+							var date = value.substr(6,8);
+							var sex = value.charAt(16)%2?'男':'女';
+							if(!value.match(/^\d{17}[0-9xX]$/)){
+								alert('身份证号码格式错误！');
+							}else{
+								newAddress = '';
+								if(diffMap[code]){
+									newAddress = '<tr>\
+										<td class="th"><span>现所属地</span></td>\
+										<td>'+diffMap[code].map(function(value){return '<p>'+getName(value)+'</p>';})+'</td>\
+									</tr>';
+								}
+								$idcard.find('.table-inner').html('<table>\
+									<tbody>\
+										<tr><td class="th" width="25%">首次签发地</td><td>'+getName(code)+'</td></tr>\
+										'+newAddress+'\
+										<tr><td class="th">出生日期</td><td>'+date.replace(/(\d{4})(\d{2})(\d{2})/,'$1年$2月$3日')+'</td></tr>\
+										<tr><td class="th">性别</td><td>'+sex+'</td></tr>\
+										<tr><td class="th">有效性</td><td>'+(isValid(value)?'<span class="text-green">有效</span>':'<span class="text-red">无效</span>')+'</td></tr>\
+									</tbody>\
+								</table>');
+							}
+							return false;
+						});
+					});
+				});
+
+
+
+			})();
+		</script>
+		<script async defer src="https://cdn.bootcdn.net/ajax/libs/github-buttons/2.21.1/buttons.min.js"></script>
+		<script>
+      		var _hmt = _hmt || [];
+			(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?b86879c9cc57dd112fe1f7dd75206b82";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+			})();
+      	</script>
+		<script>
+			(function(){
+			    var bp = document.createElement('script');
+			    var curProtocol = window.location.protocol.split(':')[0];
+			    if (curProtocol === 'https') {
+			        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+			    }
+			    else {
+			        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+			    }
+			    var s = document.getElementsByTagName("script")[0];
+			    s.parentNode.insertBefore(bp, s);
+			})();
+		</script>
+	</body>
+</html>
