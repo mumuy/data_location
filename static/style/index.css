@@ -382,7 +382,6 @@ a:hover{
     margin:0 5px;
 }
 .mod-copy .bd p{
-    margin-bottom: 10px;
     line-height: 26px;
     text-indent: 2em;
     font-size: 15px;
@@ -396,6 +395,7 @@ a:hover{
 }
 .mod-copy .bd code{
     display: block;
+    margin-bottom: 15px;
     padding: 8px 15px;
     line-height: 20px;
     background: #fff;
