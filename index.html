@@ -16,7 +16,7 @@
 		<script type="text/javascript">
 			setTimeout(function(){
 				if(location.protocol.indexOf('http')>-1&&location.hostname.indexOf('passer-by.com')==-1){
-					location.href = 'http://passer-by.com/';
+					//location.href = 'http://passer-by.com/';
 				}else if( window.top != window.self ) {
 				    window.top.location = self.location.href;
 				}
@@ -59,6 +59,16 @@
 					                    <select name="area"></select>
 									</p>
 									<div class="table-inner"></div>
+								</div>
+							</div>
+							<div id="search" class="box">
+								<div class="c-hd"><span class="title">行政区划模糊搜索</span></div>
+								<div class="c-bd">
+									<form action="" method="post">
+										<p>
+											<input type="text" name="location" value="" maxlength="18" placeholder="请输入想要找的地名"/>
+										</p>
+									</form>
 								</div>
 							</div>
 							<div id="idcard" class="box">
@@ -118,7 +128,9 @@
 			</div>
 		</div>
 		<script type="text/javascript" src="https://jquerywidget.com/public/script/jquery.min.js"></script>
-        <script type="text/javascript" src="https://jquerywidget.com/code/jquery.citys.js"></script>
+		<script type="text/javascript" src="https://jquerywidget.com/code/jquery.citys.js"></script>
+		<script type="text/javascript" src="https://jquerywidget.com/code/jquery.suggestion.js"></script>
+        <script type="text/javascript" src="static/script/locationSearch.js"></script>
 		<script type="text/javascript">
 			(function(){
 				var listMap = {};
@@ -170,6 +182,23 @@
 					$module.find('.count2').text(count2);
 					$module.find('.count3').text(count3);
 					$module.find('.count4').text(count4);
+
+					var searchItem = new locationSearch(map);
+					$location = $('.mod-panel input[name="location"]').suggestion({
+						dynamic:false,
+						autoSubmit:false,
+						onCallback:function(){
+							var location = $location.val();
+							if(location){
+								result = searchItem.query(location);
+								if(result.length>10){
+									result = 10;
+								}
+								return result;
+							}
+							return [];
+						}
+					});
 				});
 
 				// 行政区划历史查询

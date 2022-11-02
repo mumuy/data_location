@@ -261,6 +261,21 @@ a:hover{
     color:#f56954;
 }
 
+.mod-panel .suggestion{
+	background: #fff;
+}
+.mod-panel .suggestion ul{
+	border:1px solid #ebebeb;
+}
+.mod-panel .suggestion li{
+	padding:0 10px;
+	line-height: 30px;
+	cursor: pointer;
+}
+.mod-panel .suggestion .active{
+	background: #ccc;
+}
+
 .mod-intro{
     margin-bottom: 65px;
 }
