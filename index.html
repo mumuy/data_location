@@ -16,7 +16,7 @@
 		<script type="text/javascript">
 			setTimeout(function(){
 				if(location.protocol.indexOf('http')>-1&&location.hostname.indexOf('passer-by.com')==-1){
-					//location.href = 'http://passer-by.com/';
+					// location.href = 'http://passer-by.com/';
 				}else if( window.top != window.self ) {
 				    window.top.location = self.location.href;
 				}
@@ -44,7 +44,8 @@
 						<div class="hd">
 							<h1>中国行政区划数据<span class="tag">数据开源</span></h1>
 							<p>行政区划共有<b>34</b>个省级行政区，包含<b>23</b>个省、<b>5</b>个自治区、<b>4</b>个直辖市、<b>2</b>个特别行政区<p>
-							<p>其中大陆地区有<b class="count1">-</b>个地级市、<b class="count2">-</b>个地区、<b class="count3">-</b>个自治州、<b class="count4">-</b>个盟</p>
+							<p>其中大陆地区地级行政区有<b class="city1">-</b>个地级市、<b class="city2">-</b>个地区、<b class="city3">-</b>个自治州、<b class="city4">-</b>个盟</p>
+							<p>县级行政区有<b class="county1">-</b>个市辖区、<b class="county2">-</b>个县级市、<b class="county3">-</b>个县、<b class="county4">-</b>个自治县、<b class="county5">-</b>个旗、<b class="county6">-</b>个自治旗、<b class="county7">-</b>个特区、<b class="county8">-</b>个林区</p>
 						</div>
 						<div class="bd">
 							<div id="location" class="box">
@@ -62,7 +63,10 @@
 								</div>
 							</div>
 							<div id="search" class="box">
-								<div class="c-hd"><span class="title">行政区划模糊搜索</span></div>
+								<div class="c-hd">
+									<span class="title">行政区划模糊搜索</span>
+									<a class="more" href="https://jquerywidget.com/jquery-suggestion/" target="_blank">搜索建议插件 &gt;</a>
+								</div>
 								<div class="c-bd">
 									<form action="" method="post">
 										<p>
@@ -164,24 +168,53 @@
 				// 当前数据统计
 				$.getJSON('https://passer-by.com/data_location/list.json',function(map){
 					listMap = map;
-					var count1 = 0,count2 = 0,count3 = 0,count4 = 0;
+					var city1 = 0,city2 = 0,city3 = 0,city4 = 0;
+					var county1 = 0,county2 = 0,county3 = 0,county4 = 0,county5 = 0,county6 = 0,county7 = 0,county8 = 0;
 					for(var code in listMap){
 						if(code.match(/00$/)&&!code.match(/0000$/)&&code<'710000'){
 							if(listMap[code].match(/市$/)){
-								count1++;
+								city1++;
 							}else if(listMap[code].match(/地区$/)){
-								count2++;
+								city2++;
 							}else if(listMap[code].match(/自治州$/)){
-								count3++;
+								city3++;
 							}else if(listMap[code].match(/盟$/)){
-								count4++;
+								city4++;
+							}
+						}else if(!code.match(/00$/)&&!code.match(/0000$/)&&code<'710000'){
+							if(listMap[code].match(/市$/)){
+								county2++;
+							}else if(listMap[code].match(/特区$/)){
+								county7++;
+							}else if(code.match(/90\d{2}$/)&&listMap[code].match(/林区$/)){
+								county8++;
+							}else if(listMap[code].match(/区$/)){
+								console.log(code,listMap[code]);
+								county1++;
+							}else if(listMap[code].match(/自治县$/)){
+								county4++;
+							}else if(listMap[code].match(/县$/)){
+								county3++;
+							}else if(listMap[code].match(/自治旗$/)){
+								county6++;
+							}else if(listMap[code].match(/旗$/)){
+								county5++;
 							}
 						}
 					}
-					$module.find('.count1').text(count1);
-					$module.find('.count2').text(count2);
-					$module.find('.count3').text(count3);
-					$module.find('.count4').text(count4);
+					$module.find('.city1').text(city1);
+					$module.find('.city2').text(city2);
+					$module.find('.city3').text(city3);
+					$module.find('.city4').text(city4);
+
+					$module.find('.county1').text(county1);
+					$module.find('.county2').text(county2);
+					$module.find('.county3').text(county3);
+					$module.find('.county4').text(county4);
+					$module.find('.county5').text(county5);
+					$module.find('.county6').text(county6);
+					$module.find('.county7').text(county7);
+					$module.find('.county8').text(county8);
 
 					var searchItem = new locationSearch(map);
 					$location = $('.mod-panel input[name="location"]').suggestion({
