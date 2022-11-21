@@ -23,7 +23,7 @@ a:hover{
 }
 
 .wrapper{
-    background: url('../image/bg.svg') center top repeat-x;
+    background: url('../image/word_map.png') center 10px no-repeat,url('../image/bg.svg') center top repeat-x;
 }
 .header{
     margin-bottom: 15px;
