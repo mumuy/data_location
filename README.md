@@ -31,7 +31,7 @@
 
 #### 代码标准
 * [中华人民共和国民政部-中华人民共和国行政区划代码](https://www.mca.gov.cn/mzsj/xzqh/2022/202201xzqh.html)
-* [中华人民共和国国家统计局-统计用区划和城乡划分代码](http://www.stats.gov.cn/sj/tjbz/tjyqhdmhcxhfdm/2022/index.html)
+* [中华人民共和国国家统计局-统计用区划和城乡划分代码](http://www.stats.gov.cn/sj/tjbz/tjyqhdmhcxhfdm/2023/index.html)
 * [中华人民共和国国家统计局-统计用区划代码和城乡划分代码编制规则](http://www.stats.gov.cn/sj/tjbz/gjtjbz/202302/t20230213_1902741.html)
 
 港澳台地区编码并非标准编码，而是整理和参考标准编码规则自定义的，方便用户统一使用。
