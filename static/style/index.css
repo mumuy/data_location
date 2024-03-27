@@ -95,6 +95,7 @@ a:hover{
     margin-bottom: 75px;
 }
 .mod-panel .hd{
+    min-height: 150px;
     padding: 35px 0;
 	line-height: 22px;
 }
@@ -181,7 +182,7 @@ a:hover{
     border-radius: 4px;
     outline: none;
 }
-.mod-panel .bd input[type="text"]{
+.mod-panel .bd input[type="text"],.mod-panel .bd input[type="search"]{
     width: 240px;
     height: 32px;
     padding: 0 10px;

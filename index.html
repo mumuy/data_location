@@ -76,11 +76,14 @@
 								</div>
 							</div>
 							<div id="idcard" class="box">
-								<div class="c-hd"><span class="title">身份证号码查询</span></div>
+								<div class="c-hd">
+									<span class="title">身份证号码查询</span>
+									<a class="more" href="https://passer-by.com/idcard/" target="_blank">中国身份证号码解析 &gt;</a>
+								</div>
 								<div class="c-bd">
 									<form action="" method="post">
 										<p>
-											<input type="text" name="id" value="" maxlength="18" placeholder="请输入身份证号码"/>
+											<input type="search" name="id" value="" maxlength="18" placeholder="请输入身份证号码" autocomplete="off"/>
 											<button class="btn">查询</button>
 										</p>
 									</form>
@@ -137,6 +140,7 @@
 		<script type="text/javascript" src="https://jquerywidget.com/code/jquery.citys.js"></script>
 		<script type="text/javascript" src="https://jquerywidget.com/code/jquery.suggestion.js"></script>
         <script type="text/javascript" src="static/script/locationSearch.js"></script>
+		<script type="text/javascript" src="https://passer-by.com/idcard/dist/idcard.min.js"></script>
 		<script type="text/javascript">
 			(function(){
 				var listMap = {};
@@ -271,29 +275,29 @@
 						var $idcard = $('#idcard');
 						$idcard.find('form').on('submit',function(){
 							var $this = $(this);
-							var value = $this.find('input[type="text"]').val();
-							var code = value.substr(0,6);
-							var date = value.substr(6,8);
-							var sex = value.charAt(16)%2?'男':'女';
-							if(!value.match(/^\d{17}[0-9xX]$/)){
+							var id = $this.find('input[name="id"]').val();
+							var result = idcard(id);
+							if(!result){
 								alert('身份证号码格式错误！');
 							}else{
-								newAddress = '';
+								var newAddress = '';
 								if(diffMap[code]){
-									newAddress = '<tr>\
-										<td class="th"><span>现所属地</span></td>\
-										<td>'+diffMap[code].map(function(value){return '<p>'+getName(value)+'</p>';})+'</td>\
-									</tr>';
+									newAddress = `<tr>
+										<td class="th"><span>现所属地</span></td>
+										<td>${diffMap[code].map(function(value){return '<p>'+getName(value)+'</p>';})}</td>
+									</tr>`;
 								}
-								$idcard.find('.table-inner').html('<table>\
-									<tbody>\
-										<tr><td class="th" width="25%">首次签发地</td><td>'+getName(code)+'</td></tr>\
-										'+newAddress+'\
-										<tr><td class="th">出生日期</td><td>'+date.replace(/(\d{4})(\d{2})(\d{2})/,'$1年$2月$3日')+'</td></tr>\
-										<tr><td class="th">性别</td><td>'+sex+'</td></tr>\
-										<tr><td class="th">有效性</td><td>'+(isValid(value)?'<span class="text-green">有效</span>':'<span class="text-red">无效</span>')+'</td></tr>\
-									</tbody>\
-								</table>');
+								$idcard.find('.table-inner').html(`<table>
+									<tbody>
+										<tr><td class="th" width="25%">证件类型</td><td>${result['type']}</td></tr>
+										<tr><td class="th">国籍</td><td>${result['country']}</td></tr>
+										<tr><td class="th">首次签发地</td><td>${result['sign']}</td></tr>
+										${newAddress}
+										<tr><td class="th">出生日期</td><td>${result['birthday'].replace(/(\d{4})(\d{2})(\d{2})/,'$1年$2月$3日')}</td></tr>
+										<tr><td class="th">性别</td><td>${result['sex']}</td></tr>
+										<tr><td class="th">有效性</td><td>${(result['isValid']?'<span class="text-green">有效</span>':'<span class="text-red">无效</span>')}</td></tr>
+									</tbody>
+								</table>`);
 							}
 							return false;
 						});
