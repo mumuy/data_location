@@ -4,6 +4,8 @@
 
 三级联动插件：[https://jquerywidget.com/jquery-citys/](https://jquerywidget.com/jquery-citys/)
 
+身份证号识别：[https://passer-by.com/idcard/](https://passer-by.com/idcard/)
+
 ### 版权
 数据库由 [passer-by.com](https://passer-by.com/) 整理,获取最新最全的数据还请关注此项目。
 
