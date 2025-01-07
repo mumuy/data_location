@@ -1,1 +1,1 @@
-document.write('2023年6月');
+document.write('2025年1月');
