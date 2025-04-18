@@ -118,9 +118,62 @@ a:hover{
     border-radius: 4px;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,0.03);
 }
-.mod-panel .hd p{
+.mod-panel .hd p {
     line-height: 26px;
     font-size: 15px;
+}
+.mod-panel .hd .buttons{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    line-height: 32px;
+}
+.mod-panel .hd .btn {
+    display: inline-block;
+    height: 44px;
+    min-width: 120px;
+    padding:0 20px;
+    margin: 0 5px;
+    background: #2095f2;
+    border: medium none;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+    line-height: 42px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border-radius: 21px;
+    text-decoration: none;
+}
+.mod-panel .hd .btn img,.mod-panel .hd .btn span{
+    vertical-align: middle;
+}
+.mod-panel .hd .btn:hover{
+	background: #1b85da;
+}
+.mod-panel .hd .btn-green{
+	background: #4bae4f;
+	color: #fff;
+}
+.mod-panel .hd .btn-green:hover{
+	background: #47a04b;
+}
+.mod-panel .hd .btn-red{
+	background: #f56954;
+	color: #fff;
+}
+.mod-panel .hd .btn-red:hover{
+	background: #f4543c;;
+}
+.mod-panel .hd .btn-orange{
+	background: #ff9000;
+	color: #fff;
+}
+.mod-panel .hd .btn-orange:hover{
+	background: #e18309;
 }
 .mod-panel .hd b{
 	margin: 0 3px;
