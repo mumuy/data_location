@@ -535,6 +535,14 @@ a:hover{
         font-size: 13px;
         overflow: hidden;
     }
+    .mod-panel .hd .btn {
+        min-width: 64px;
+        margin: 2px 1px;
+        padding: 0 15px;
+        height: 36px;
+        line-height: 35px;
+        font-size: 14px;
+    }
 
     .mod-article{
         margin-bottom: 25px;
