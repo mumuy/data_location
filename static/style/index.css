@@ -500,6 +500,40 @@ a:hover{
     line-height: 30px;
 }
 
+
+.mod-fixedbar .bd {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 99;
+}
+.mod-fixedbar .bd a{
+    position: relative;
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 2px;
+    background: rgba(255,255,255,0.8);
+    border: 1px solid #f0f0f0;
+    line-height: 48px;
+    text-align: center;
+}
+.mod-fixedbar .bd .popup{
+    display: none;
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    z-index: 99;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.05);
+}
+.mod-fixedbar .bd a:hover{
+    background: rgba(255,255,255,0.9);
+}
+.mod-fixedbar .bd a:hover .popup{
+    display: block;
+}
+
 @media screen and (max-width: 1020px) {
     .header{
         margin-bottom: 10px;
@@ -576,5 +610,15 @@ a:hover{
     }
     .mod-panel .bd .btn{
         min-width: 64px;
+    }
+
+    .mod-fixedbar .bd {
+        right: 10px;
+        bottom: 10px;
+    }
+    .mod-fixedbar .bd a{
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
     }
 }
