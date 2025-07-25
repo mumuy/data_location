@@ -500,7 +500,6 @@ a:hover{
     line-height: 30px;
 }
 
-
 .mod-fixedbar .bd {
     position: fixed;
     right: 20px;
@@ -514,24 +513,12 @@ a:hover{
     height: 48px;
     margin-bottom: 2px;
     background: rgba(255,255,255,0.8);
-    border: 1px solid #f0f0f0;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
     line-height: 48px;
     text-align: center;
 }
-.mod-fixedbar .bd .popup{
-    display: none;
-    position: absolute;
-    right: 50px;
-    bottom: 0;
-    z-index: 99;
-    border: 1px solid #f0f0f0;
-    box-shadow: 0 0 2px 0 rgba(0,0,0,0.05);
-}
 .mod-fixedbar .bd a:hover{
     background: rgba(255,255,255,0.9);
-}
-.mod-fixedbar .bd a:hover .popup{
-    display: block;
 }
 
 @media screen and (max-width: 1020px) {

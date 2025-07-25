@@ -147,7 +147,7 @@
                 </div>
                 <div class="mod-fixedbar">
                     <div class="bd">
-                        <a href="javascript:;"><img src="static/image/gotop.png" width="24" height="24"></a>
+                        <a class="gotop" href="javascript:;" rel="nofollow"><img src="static/image/gotop.png" width="24" height="24"></a>
                     </div>
                 </div>
             </div>
@@ -322,19 +322,19 @@
             })();
 
             // 底部滚动
-            (function () {
+            (function(){
                 let timer = null;
-                let $gotop = document.querySelector('.mod-fixedbar a');
-                $gotop.addEventListener('click', function () {
+                let $gotop = document.querySelector('.mod-fixedbar .gotop');
+                $gotop.addEventListener('click',function(){
                     cancelAnimationFrame(timer);
-                    let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-                    let move = scrollTop / 18;
-                    timer = requestAnimationFrame(function fn() {
-                        var oTop = document.body.scrollTop || document.documentElement.scrollTop;
-                        if (oTop > 0) {
-                            document.body.scrollTop = document.documentElement.scrollTop = oTop - move;
+                    let scrollTop = document.documentElement.scrollTop;
+                    let move = scrollTop/18;
+                    timer = requestAnimationFrame(function fn(){
+                        var oTop = document.documentElement.scrollTop;
+                        if(oTop > 0){
+                            document.documentElement.scrollTop = oTop - move;
                             timer = requestAnimationFrame(fn);
-                        } else {
+                        }else{
                             cancelAnimationFrame(timer);
                         }
                     });
