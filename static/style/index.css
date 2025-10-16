@@ -407,9 +407,7 @@
         margin-bottom: 25px;
     }
     .mod-poster .bd{
-        float: none;
-        padding: 0 0 10px;
-        width: auto;
+        padding: 25px 0;
         margin-bottom: 15px;
     }
     .mod-poster .bd h1{
