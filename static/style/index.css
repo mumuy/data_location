@@ -1,112 +1,31 @@
-html{color:#000;background:#FFF}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}ol,ul{list-style:none}caption,th{text-align:left}h1,h3,h3,h4,h5,h6{font-size:100%;font-weight:normal}q:before,q:after{content:''}abbr,acronym{border:0;font-variant:normal}sup{vertical-align:text-top}sub{vertical-align:text-bottom}input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}legend{color:#000}
-html{
-    height:100%;
+.module{
+    margin: 160px 0;
 }
-body{
-    height: 100%;
-    font-size: 14px;
-    font-family: Arial,Helvetica,"Microsoft Yahei";
-    color: rgb(110, 119, 129);
+.module .hd{
+    margin-bottom: 6px;
+    line-height: 32px;
 }
-button, input {
-    font-family: Arial,Helvetica,"Microsoft Yahei";
-}
-img{
-    vertical-align: middle;
-}
-a{
-    text-decoration: none;
-    color: rgb(110, 119, 129);
-}
-a:hover{
-    text-decoration: underline;
+.module .hd span{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--title-color);
 }
 
-.wrapper{
-    background: url('../image/word_map.png') center 10px no-repeat,url('../image/bg.svg') center top repeat-x;
+.mod-poster{
+    margin-bottom: 25px;
 }
-.header{
-    margin-bottom: 15px;
+.mod-poster .bd{
+    padding: 60px 0;
+	line-height: 24px;
 }
-.container{
-    padding-bottom: 30px;
-}
-.inner{
-    max-width: 1000px;
-    padding: 0 10px;
-    margin: 0 auto;
-}
-
-.mod-head .bd{
-    height: 36px;
-    padding: 10px 0;
-    text-align: right;
-}
-.mod-head .btn{
-    position: relative;
-    display: inline-block;
-    min-width: 56px;
-    height: 34px;
-    padding: 0 12px;
-    background: rgba(255,255,255,0.3);
-    border: 1px solid rgba(0,0,0,0.05);
-    border-radius: 6px;
-    line-height: 34px;
-    text-decoration: none;
-    text-align: center;
-    font-size: 14px;
-    color: #333;
-    overflow: hidden;
-    transition: color .2s,opacity .2s;
-    font-family: Tahoma,Arial, Helvetica,"Microsoft YaHei";
-    outline: none;
-    -webkit-appearance: none;
-}
-.mod-head .btn:after {
-    content: " ";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    left: 0;
-    top: 0;
-    opacity: 0;
-    transition: opacity .2s;
-    border-radius: 6px;
-    overflow: hidden;
-    pointer-events: none;
-}
-.mod-head .btn span,.mod-head .btn svg{
-    vertical-align: middle;
-}
-.mod-head .btn svg,.mod-head .btn svg+span{
-    position: relative;
-    top: -1px;
-}
-.mod-head .btn:hover {
-    color: #000;
-    opacity: 1;
-}
-.mod-head .btn:hover:after {
-    opacity: .02;
-}
-
-.mod-panel{
-    margin-bottom: 75px;
-}
-.mod-panel .hd{
-    min-height: 150px;
-    padding: 35px 0;
-	line-height: 22px;
-}
-.mod-panel .hd h1{
+.mod-poster .bd h1{
     margin-bottom: 10px;
 	line-height: 48px;
     font-weight: bold;
 	font-size: 36px;
-	color:#1a2b3b;
+	color:var(--title-color);
 }
-.mod-panel .hd h1 span.tag{
+.mod-poster .bd h1 span.tag{
     display: inline-block;
     padding: 0 8px;
     margin: 0 5px;
@@ -118,18 +37,21 @@ a:hover{
     border-radius: 4px;
     box-shadow: 0 1px 5px 0 rgba(0,0,0,0.03);
 }
-.mod-panel .hd p {
+.mod-poster .bd p{
+    margin-bottom: 10px;
     line-height: 26px;
-    font-size: 15px;
 }
-.mod-panel .hd .buttons{
-    margin-top: 10px;
+.mod-poster .bd b{
+	margin: 0 3px;
+	color: #fd7474;
+}
+.mod-poster .buttons{
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 6px;
     line-height: 32px;
 }
-.mod-panel .hd .btn {
+.mod-poster .btn {
     display: inline-block;
     height: 44px;
     min-width: 120px;
@@ -148,62 +70,94 @@ a:hover{
     border-radius: 21px;
     text-decoration: none;
 }
-.mod-panel .hd .btn img,.mod-panel .hd .btn span{
+.mod-poster .btn img,.mod-poster .btn span{
     vertical-align: middle;
 }
-.mod-panel .hd .btn:hover{
+.mod-poster .btn:hover{
 	background: #1b85da;
 }
-.mod-panel .hd .btn-green{
+.mod-poster .btn-green{
 	background: #4bae4f;
 	color: #fff;
 }
-.mod-panel .hd .btn-green:hover{
+.mod-poster .btn-green:hover{
 	background: #47a04b;
 }
-.mod-panel .hd .btn-red{
+.mod-poster .bd .btn-red{
 	background: #f56954;
 	color: #fff;
 }
-.mod-panel .hd .btn-red:hover{
+.mod-poster .btn-red:hover{
 	background: #f4543c;;
 }
-.mod-panel .hd .btn-orange{
+.mod-poster .btn-orange{
 	background: #ff9000;
 	color: #fff;
 }
-.mod-panel .hd .btn-orange:hover{
+.mod-poster .btn-orange:hover{
 	background: #e18309;
 }
-.mod-panel .hd b{
-	margin: 0 3px;
-	color: #fd7474;
-}
-.mod-panel .bd .box{
-    margin-bottom: 20px;
+
+.mod-panel{
+    margin-bottom: 25px;
     background: #fff;
-    box-shadow: 0 1px 5px 0 rgba(0,0,0,0.05);
-    border: 1px solid rgba(0,0,0,0.075);
+    border: 1px solid #f0f0f099;
+    border-radius: 8px;
+    box-shadow: 1px 2px 12px rgba(0, 0, 0, 0.02);
 }
-.mod-panel .bd .c-hd{
-    padding: 10px 20px 10px 5px;
-	border-bottom: 1px solid #f4f4f4;
+.mod-panel .hd{
+    position: relative;
+    padding: 10px 20px;
+    border-bottom: 1px solid #f0f0f099;
+    line-height: 24px;
 }
-.mod-panel .bd .c-hd .title{
-    height: 20px;
-    padding-left: 12px;
-    border-left: 3px solid #2095f2;
+.mod-panel .hd .title{
+    display: inline-block;
     font-size: 18px;
-    font-weight: bold;
-    color: #1a2b3b;
+    font-weight: bold;  
+    color: var(--title-color);
 }
-.mod-panel .bd .c-hd .more{
+.mod-panel .hd .more{
     float: right;
     text-decoration: none;
     color: #999;
 }
-.mod-panel .bd .c-bd{
-    padding:20px;
+.mod-panel .hd::after{
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    content: '';
+    width: 4px;
+    height: 24px;
+    background: #2095f2;
+    margin-top: -12px;
+    border-radius: 3px;
+}
+.mod-panel .bd{
+    padding: 20px;
+}
+.mod-panel .bd p{
+    margin-bottom: 10px;
+    line-height: 26px;
+    text-indent: 2em;
+}
+.mod-panel .bd h4{
+    line-height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--title-color);
+}
+.mod-panel .bd code{
+    display: block;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f8f8;
+    border-radius: 6px;
+}
+.mod-panel .bd pre{
+    white-space: break-spaces;
+    word-break: break-all;
+    word-wrap: break-word;
 }
 .mod-panel .bd .table-inner{
     padding-top:20px;
@@ -217,39 +171,48 @@ a:hover{
     font-size: 15px;
     font-weight: bold;
 }
+.mod-panel .bd thead{
+    background: #f6f8fa;
+}
 .mod-panel .bd th,.mod-panel .bd td{
     padding: 6px 12px;
-    border: 1px solid #e2e2e2;
-    line-height: 22px;
+    border: 1px solid #e1e6ea;
+    line-height: 24px;
 }
 .mod-panel .bd td.th{
-    background: #f5f5f5;
+    background: #f6f8fa;
 }
-.mod-panel .bd thead{
-    background: #f5f5f5;
+.mod-panel .bd td p{
+    margin-bottom: 0;
+    text-indent: 0;
 }
 .mod-panel .bd select{
-    height: 32px;
+    height: 36px;
     padding: 0 10px;
     border: 1px solid #e2e2e2;
-    border-radius: 4px;
+    box-sizing: border-box;
+    vertical-align: middle;
     outline: none;
+    border-radius: 4px;
 }
 .mod-panel .bd input[type="text"],.mod-panel .bd input[type="search"]{
     width: 240px;
-    height: 32px;
+    height: 36px;
     padding: 0 10px;
     border: 1px solid #e2e2e2;
     border-radius: 4px;
     vertical-align: middle;
     outline: none;
+    box-sizing: border-box;
 }
 .mod-panel .bd .btn {
-    height: 34px;
+    height: 36px;
     min-width: 80px;
+    padding:0 15px;
     background: #2095f2;
     border: medium none;
-    line-height: 34px;
+    box-sizing: border-box;
+    line-height: 36px;
     vertical-align: middle;
     font-size: 15px;
     color: #fff;
@@ -302,11 +265,8 @@ a:hover{
 	resize: none;
 	outline: none;
 }
-.mod-panel .bd p{
-    line-height: 22px;
-}
-.mod-panel .bd p span{
-    margin-right: 4px;
+.mod-panel .bd label{
+    white-space: nowrap;
 }
 .mod-panel .bd .text-green{
     color: #4bae4f;
@@ -314,7 +274,12 @@ a:hover{
 .mod-panel .bd .text-red{
     color:#f56954;
 }
-
+.mod-panel .input-wrapper{
+    line-height: 24px;
+}
+.mod-panel .input-wrapper span{
+    margin-right: 5px;
+}
 .mod-panel .suggestion{
 	background: #fff;
 }
@@ -373,6 +338,12 @@ a:hover{
 .mod-article{
     margin-bottom: 65px;
 }
+.mod-article .hd{
+    margin-top: -36px;
+}
+.mod-article .hd span{
+    font-size: 24px;
+}
 .mod-article .bd{
     position: relative;
     padding: 30px 0;
@@ -396,41 +367,7 @@ a:hover{
 .mod-article .bd p{
     margin-bottom: 12px;
     line-height: 28px;
-    font-size: 15px;
     text-indent: 2em;
-}
-
-.mod-app{
-    margin-bottom: 65px;
-}
-.mod-app .hd{
-    margin: 0 5px 5px;
-    line-height: 30px;
-    text-align: center;
-}
-.mod-app .hd span{
-    font-size: 18px;
-    font-weight: bold;
-    color: #646464;
-}
-.mod-app .bd ul{
-    padding: 20px 0;
-    text-align: center;
-    overflow: hidden;
-}
-.mod-app .bd li{
-    display: inline-block;
-    width: 12%;
-    margin-bottom: 15px;
-}
-.mod-app .bd .app span{
-    display: block;
-    margin:0 15px;
-    line-height: 32px;
-    text-align: center;
-}
-.mod-app .bd .app span.icon{
-    margin-bottom: 5px;
 }
 
 .mod-copy{
@@ -438,22 +375,13 @@ a:hover{
     padding: 35px 0;
     background: rgb(246, 248, 250);
 }
-.mod-copy .hd{
-    margin: 0 5px 5px;
-    line-height: 30px;
-}
-.mod-copy .hd span{
-    font-size: 18px;
-    font-weight: bold;
-    color: #646464;
-}
 .mod-copy .bd{
     margin:0 5px;
 }
 .mod-copy .bd p{
-    line-height: 26px;
+    margin-bottom: 12px;
+    line-height: 28px;
     text-indent: 2em;
-    font-size: 15px;
 }
 .mod-copy .bd .buttons{
     margin: 15px 0;
@@ -474,99 +402,32 @@ a:hover{
 }
 
 
-.mod-foot .bd{
-    padding: 10px 0;
-    margin-bottom: 15px;
-    text-align: center;
-}
-.mod-foot .bd p{
-    line-height: 22px;
-}
-.mod-foot .bd p a,.mod-foot .bd p span{
-    vertical-align: middle;
-}
-.mod-foot .bd p.buttons{
-    margin: 10px 0 5px;
-}
-.mod-foot .box{
-    width: 200px;
-    height: 180px;
-    margin: 0 auto 20px;
-    line-height: 30px;
-    text-align: center;
-    overflow: hidden;
-}
-.mod-foot p{
-    line-height: 30px;
-}
-
-.mod-fixedbar .bd {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 99;
-}
-.mod-fixedbar .bd a{
-    position: relative;
-    display: block;
-    width: 48px;
-    height: 48px;
-    margin-bottom: 2px;
-    background: rgba(255,255,255,0.8);
-    box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
-    line-height: 48px;
-    text-align: center;
-}
-.mod-fixedbar .bd a:hover{
-    background: rgba(255,255,255,0.9);
-}
-
 @media screen and (max-width: 1020px) {
-    .header{
-        margin-bottom: 10px;
-    }
-    .inner{
-        max-width: 640px;
-    }
-
-    .mod-head .hd span.tag{
-        padding: 5px 8px;
-    }
-    .mod-head .bd .btn{
-        padding: 0 6px;
-        font-size: 13px;
-    }
-
-    .mod-panel{
+    .mod-poster{
         margin-bottom: 25px;
     }
-    .mod-panel .hd{
+    .mod-poster .bd{
         float: none;
-        padding-top: 0;
+        padding: 0 0 10px;
         width: auto;
         margin-bottom: 15px;
     }
-    .mod-panel .hd h1{
+    .mod-poster .bd h1{
         margin-bottom: 5px;
         line-height: 26px;
         font-size: 20px;
     }
-    .mod-panel .hd p{
+    .mod-poster .bd p{
         line-height: 22px;
         font-size: 13px;
         overflow: hidden;
     }
-    .mod-panel .hd .btn {
-        min-width: 64px;
-        margin: 2px 1px;
-        padding: 0 15px;
-        height: 36px;
-        line-height: 35px;
-        font-size: 14px;
-    }
 
     .mod-article{
         margin-bottom: 25px;
+    }
+    .mod-article .hd span{
+        font-size: 20px;
     }
     .mod-article .bd{
         padding: 15px 0;
@@ -594,26 +455,37 @@ a:hover{
 }
 
 @media screen and (max-width: 640px) {
-    .mod-panel .inner{
-        padding: 10px;
+    .mod-poster .buttons{
+        margin-bottom: 10px;
+        padding: 10px 0;
     }
-    .mod-panel .bd .c-bd{
+    .mod-poster .btn{
+        min-width: 64px;
+        margin: 2px 1px;
+        padding: 0 15px;
+        height: 36px;
+        line-height: 35px;
+        font-size: 14px;
+    }
+    .mod-poster .btn img{
+        display: none;
+    }
+
+    .mod-panel .bd{
         padding: 15px 10px;
     }
     .mod-panel .bd input[type="text"]{
         width: 200px;
     }
-    .mod-panel .bd .btn{
+    .mod-panel .bd .c-ft {
+        padding: 10px;
+    }
+    .mod-panel .btn {
         min-width: 64px;
-    }
-
-    .mod-fixedbar .bd {
-        right: 10px;
-        bottom: 10px;
-    }
-    .mod-fixedbar .bd a{
-        width: 36px;
+        margin: 2px 1px;
+        padding: 0 15px;
         height: 36px;
-        line-height: 36px;
+        line-height: 35px;
+        font-size: 14px;
     }
 }
