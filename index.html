@@ -352,26 +352,6 @@
                     });
                 });
             })();
-
-            // 底部滚动
-            (function(){
-                let timer = null;
-                let $gotop = document.querySelector('.mod-fixedbar .gotop');
-                $gotop.addEventListener('click',function(){
-                    cancelAnimationFrame(timer);
-                    let scrollTop = document.documentElement.scrollTop;
-                    let move = scrollTop/18;
-                    timer = requestAnimationFrame(function fn(){
-                        var oTop = document.documentElement.scrollTop;
-                        if(oTop > 0){
-                            document.documentElement.scrollTop = oTop - move;
-                            timer = requestAnimationFrame(fn);
-                        }else{
-                            cancelAnimationFrame(timer);
-                        }
-                    });
-                });
-            })();
         </script>
         <script async defer src="https://cdn.bootcdn.net/ajax/libs/github-buttons/2.21.1/buttons.min.js"></script>
         <script type="text/javascript" src="https://passer-by.com/static/script/common.js"></script>
