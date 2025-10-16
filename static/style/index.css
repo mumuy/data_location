@@ -178,6 +178,7 @@
     padding: 6px 12px;
     border: 1px solid #e1e6ea;
     line-height: 24px;
+    white-space: nowrap;
 }
 .mod-panel .bd td.th{
     background: #f6f8fa;
