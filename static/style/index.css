@@ -160,15 +160,15 @@
     word-wrap: break-word;
 }
 .mod-panel .bd .table-inner{
+    margin-top: 15px;
     overflow-x: auto;
 }
 .mod-panel .bd table{
     width: 100%;
-    margin-bottom: 15px;
 }
 .mod-panel .bd caption{
-    line-height: 30px;
-    font-size: 15px;
+    line-height: 32px;
+    font-size: 16px;
     font-weight: bold;
 }
 .mod-panel .bd thead{

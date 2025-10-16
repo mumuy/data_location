@@ -95,7 +95,7 @@
                                 <select name="city"></select>
                                 <select name="district"></select>
                             </div>
-                            <div class="table-inner"></div>
+                            <div class="result-container"></div>
                         </div>
                     </section>
                     <section id="search" class="mod-panel">
@@ -105,7 +105,9 @@
                         </div>
                         <div class="bd">
                             <form action="" method="post">
-                                <input type="text" name="location" value="" maxlength="18" placeholder="请输入想要找的地名"/>
+                                <div class="input-wrapper">
+                                    <input type="text" name="location" value="" maxlength="18" placeholder="请输入想要找的地名"/>
+                                </div>
                             </form>
                         </div>
                     </section>
@@ -116,10 +118,12 @@
                         </div>
                         <div class="bd">
                             <form action="" method="post">
-                                <input type="search" name="id" value="" maxlength="18" placeholder="请输入身份证号码" autocomplete="off"/>
-                                <button class="btn">查询</button>
+                                <div class="input-wrapper">
+                                    <input type="search" name="id" value="" maxlength="18" placeholder="请输入身份证号码" autocomplete="off"/>
+                                    <button class="btn">查询</button>
+                                </div>
                             </form>
-                            <div class="table-inner"></div>
+                            <div class="result-container"></div>
                         </div>
                     </section>
                     <section class="module mod-article">
@@ -305,17 +309,45 @@
                             'code':'110101',
                             'onChange':function(data){
                                 var code = data['code'].toString();
-                                var trs_html = [];
-                                if(diffMap2[code]){
-                                    trs_html = diffMap2[code].map(function(value){
-                                        return '<tr><td>'+value+'</td><td>'+getName(value)+'</td></tr>';
-                                    });
-                                    $location.find('.table-inner').html('<table><caption>当前行政区划</caption><thead><tr><th width="25%">区划代码</th><th>行政区划地址</th></tr></thead><tbody><tr><td>'+code+'</td><td>'+getName(code)+'</td></tr></tbody></table>\
-                                    <table><caption>历史行政区划</caption><thead><tr><th width="25%">区划代码</th><th>行政区划地址</th></tr></thead><tbody>'+trs_html.join('')+'</tbody></table>');
-                                }else{
-                                    $location.find('.table-inner').html('<table><caption>当前行政区划</caption><thead><tr><th width="25%">区划代码</th><th>行政区划地址</th></tr></thead><tbody><tr><td>'+code+'</td><td>'+getName(code)+'</td></tr></tbody></table>\
-                                    <table><caption>历史行政区划</caption><thead><tr><th width="25%">区划代码</th><th>行政区划地址</th></tr></thead><tbody><tr><td colspan="2" align="center">暂无数据</td></tr></tbody></table>');
-                                }
+                                $location.find('.result-container').html(`
+                                    <div class="table-inner">
+                                        <table>
+                                            <caption>当前行政区划</caption>
+                                            <thead>
+                                                <tr>
+                                                    <th width="30%">区划代码</th>
+                                                    <th>行政区划地址</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>${code}</td>
+                                                    <td>${getName(code)}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="table-inner">
+                                        <table>
+                                            <caption>历史行政区划</caption>
+                                            <thead>
+                                                <tr>
+                                                    <th width="30%">区划代码</th>
+                                                    <th>行政区划地址</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                ${
+                                                    diffMap2[code]?
+                                                    diffMap2[code].map(function(value){
+                                                        return '<tr><td>'+value+'</td><td>'+getName(value)+'</td></tr>';
+                                                    }).join(''):
+                                                    '<tr><td colspan="2" align="center">暂无数据</td></tr>'
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                `);
                             }
                         });
 
@@ -335,17 +367,21 @@
                                         <td>${diffMap[code].map(function(value){return '<p>'+getName(value)+'</p>';})}</td>
                                     </tr>`;
                                 }
-                                $idcard.find('.table-inner').html(`<table>
-                                    <tbody>
-                                        <tr><td class="th" width="25%">证件类型</td><td>${result['type']}</td></tr>
-                                        <tr><td class="th">国籍</td><td>${result['country']}</td></tr>
-                                        <tr><td class="th">首次签发地</td><td>${result['sign']}</td></tr>
-                                        ${newAddress}
-                                        <tr><td class="th">出生日期</td><td>${result['birthday'].replace(/(\d{4})(\d{2})(\d{2})/,'$1年$2月$3日')}</td></tr>
-                                        <tr><td class="th">性别</td><td>${result['sex']}</td></tr>
-                                        <tr><td class="th">有效性</td><td>${(result['isValid']?'<span class="text-green">有效</span>':'<span class="text-red">无效</span>')}</td></tr>
-                                    </tbody>
-                                </table>`);
+                                $idcard.find('.result-container').html(`
+                                    <div class="table-inner">
+                                        <table>
+                                            <tbody>
+                                                <tr><td class="th" width="25%">证件类型</td><td>${result['type']}</td></tr>
+                                                <tr><td class="th">国籍</td><td>${result['country']}</td></tr>
+                                                <tr><td class="th">首次签发地</td><td>${result['sign']}</td></tr>
+                                                ${newAddress}
+                                                <tr><td class="th">出生日期</td><td>${result['birthday'].replace(/(\d{4})(\d{2})(\d{2})/,'$1年$2月$3日')}</td></tr>
+                                                <tr><td class="th">性别</td><td>${result['sex']}</td></tr>
+                                                <tr><td class="th">有效性</td><td>${(result['isValid']?'<span class="text-green">有效</span>':'<span class="text-red">无效</span>')}</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                `);
                             }
                             return false;
                         });
