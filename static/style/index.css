@@ -160,7 +160,7 @@
     word-wrap: break-word;
 }
 .mod-panel .bd .table-inner{
-    padding-top:20px;
+    overflow-x: auto;
 }
 .mod-panel .bd table{
     width: 100%;
@@ -253,6 +253,12 @@
 	background: #f0f0f0;
 	color: #aaa;
 }
+.mod-panel .bd .text-green{
+    color: #4bae4f;
+}
+.mod-panel .bd .text-red{
+    color:#f56954;
+}
 .mod-panel .bd textarea{
     display: block;
 	width: 100%;
@@ -267,12 +273,6 @@
 }
 .mod-panel .bd label{
     white-space: nowrap;
-}
-.mod-panel .bd .text-green{
-    color: #4bae4f;
-}
-.mod-panel .bd .text-red{
-    color:#f56954;
 }
 .mod-panel .input-wrapper{
     line-height: 24px;
@@ -295,45 +295,6 @@
 	background: #ccc;
 }
 
-.mod-intro{
-    margin-bottom: 65px;
-}
-.mod-intro .hd{
-    margin: 0 5px 5px;
-    line-height: 30px;
-}
-.mod-intro .hd span{
-    font-size: 18px;
-    font-weight: bold;
-    color: #646464;
-}
-.mod-intro .bd ul{
-    overflow: hidden;
-}
-.mod-intro .bd li{
-    float: left;
-    width: 33.33%;
-}
-.mod-intro .bd .item{
-    padding: 15px 12px;
-    margin: 0 5px 10px;
-    background: rgb(246, 248, 250);
-    border-radius: 5px;
-}
-.mod-intro .bd p{
-    line-height: 22px;
-}
-.mod-intro .bd p.q{
-    font-weight: bold;
-    color: #646464;
-}
-.mod-intro .article p{
-    line-height: 22px;
-    text-indent: 2em;
-}
-.mod-intro .table-inner{
-    overflow-x: auto;
-}
 
 .mod-article{
     margin-bottom: 65px;
