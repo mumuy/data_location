@@ -16,14 +16,14 @@
 }
 .mod-poster .bd{
     padding: 60px 0;
-	line-height: 24px;
+    line-height: 24px;
 }
 .mod-poster .bd h1{
     margin-bottom: 10px;
-	line-height: 48px;
+    line-height: 48px;
     font-weight: bold;
-	font-size: 36px;
-	color:var(--title-color);
+    font-size: 36px;
+    color:var(--title-color);
 }
 .mod-poster .bd h1 span.tag{
     display: inline-block;
@@ -42,8 +42,8 @@
     line-height: 26px;
 }
 .mod-poster .bd b{
-	margin: 0 3px;
-	color: #fd7474;
+    margin: 0 3px;
+    color: #fd7474;
 }
 .mod-poster .buttons{
     margin-bottom: 20px;
@@ -74,28 +74,28 @@
     vertical-align: middle;
 }
 .mod-poster .btn:hover{
-	background: #1b85da;
+    background: #1b85da;
 }
 .mod-poster .btn-green{
-	background: #4bae4f;
-	color: #fff;
+    background: #4bae4f;
+    color: #fff;
 }
 .mod-poster .btn-green:hover{
-	background: #47a04b;
+    background: #47a04b;
 }
 .mod-poster .bd .btn-red{
-	background: #f56954;
-	color: #fff;
+    background: #f56954;
+    color: #fff;
 }
 .mod-poster .btn-red:hover{
-	background: #f4543c;;
+    background: #f4543c;;
 }
 .mod-poster .btn-orange{
-	background: #ff9000;
-	color: #fff;
+    background: #ff9000;
+    color: #fff;
 }
 .mod-poster .btn-orange:hover{
-	background: #e18309;
+    background: #e18309;
 }
 
 .mod-panel{
@@ -222,28 +222,28 @@
     border-radius: 4px;
 }
 .mod-panel .bd .btn:hover{
-	background: #1b85da;
+    background: #1b85da;
 }
 .mod-panel .bd .btn-green{
-	background: #4bae4f;
-	color: #fff;
+    background: #4bae4f;
+    color: #fff;
 }
 .mod-panel .bd .btn-green:hover{
-	background: #47a04b;
+    background: #47a04b;
 }
 .mod-panel .bd .btn-red{
-	background: #f56954;
-	color: #fff;
+    background: #f56954;
+    color: #fff;
 }
 .mod-panel .bd .btn-red:hover{
-	background: #f4543c;;
+    background: #f4543c;;
 }
 .mod-panel .bd .btn-orange{
-	background: #ff9000;
-	color: #fff;
+    background: #ff9000;
+    color: #fff;
 }
 .mod-panel .bd .btn-orange:hover{
-	background: #e18309;
+    background: #e18309;
 }
 .mod-panel .bd .btn-small{
     min-width: 36px;
@@ -251,8 +251,8 @@
     cursor: pointer;
 }
 .mod-panel .bd .btn[disabled]{
-	background: #f0f0f0;
-	color: #aaa;
+    background: #f0f0f0;
+    color: #aaa;
 }
 .mod-panel .bd .text-green{
     color: #4bae4f;
@@ -262,15 +262,15 @@
 }
 .mod-panel .bd textarea{
     display: block;
-	width: 100%;
-	height: 120px;
-	padding:5px 10px;
+    width: 100%;
+    height: 120px;
+    padding:5px 10px;
     background: #fafafa;
-	border: 1px solid #ebebeb;
-	box-sizing: border-box;
-	border-radius: 5px;
-	resize: none;
-	outline: none;
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+    border-radius: 5px;
+    resize: none;
+    outline: none;
 }
 .mod-panel .bd label{
     white-space: nowrap;
@@ -282,18 +282,18 @@
     margin-right: 5px;
 }
 .mod-panel .suggestion{
-	background: #fff;
+    background: #fff;
 }
 .mod-panel .suggestion ul{
-	border:1px solid #ebebeb;
+    border:1px solid #ebebeb;
 }
 .mod-panel .suggestion li{
-	padding:0 10px;
-	line-height: 30px;
-	cursor: pointer;
+    padding:0 10px;
+    line-height: 30px;
+    cursor: pointer;
 }
 .mod-panel .suggestion .active{
-	background: #ccc;
+    background: #ccc;
 }
 
 
