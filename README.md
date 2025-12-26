@@ -4,7 +4,7 @@
 
 三级联动插件：[https://jquerywidget.com/jquery-citys/](https://jquerywidget.com/jquery-citys/)     (基于jQuery)
 
-区划选择组件：[https://jquerywidget.com/widget-region/](https://jquerywidget.com/widget-region/)    (基于Web Components)
+区划选择组件：[https://passer-by.com/widget-region/](https://passer-by.com/widget-region/)    (基于Web Components)
 
 身份证号识别：[https://passer-by.com/idcard/](https://passer-by.com/idcard/)
 
