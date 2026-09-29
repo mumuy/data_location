@@ -279,6 +279,9 @@
                         onCallback:function(){
                             var location = $location.val();
                             if(location){
+                                location = location.replace(/[&<>"']/g,function(c){
+                                    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+                                });
                                 result = searchItem.query(location);
                                 if(result.length>10){
                                     result = 10;
